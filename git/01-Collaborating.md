@@ -4,7 +4,7 @@ Collaborating with Git
 Chris and Natalia both clone the repository:
 
 ```shell
-git clone https://github.com/anushkrish/cocktail-recipes.git
+git clone https://github.com/gforsyth/cocktail-recipes.git
 ```
 
 Chris
@@ -44,9 +44,9 @@ Natalia is more practical:
 ```
 ```shell
 > git push
-To https://github.com/anushkrish/cocktail-recipes.git
+To https://github.com/gforsyth/cocktail-recipes.git
  ! [rejected]        master -> master (non-fast-forward)
-error: failed to push some refs to 'https://github.com/anushkrish/cocktail-recipes.git'
+error: failed to push some refs to 'https://github.com/gforsyth/cocktail-recipes.git'
 To prevent you from losing history, non-fast-forward updates were rejected
 Merge the remote changes (e.g. 'git pull') before pushing again.  See the
 'Note about fast-forwards' section of 'git push --help' for details.
@@ -215,7 +215,7 @@ remote: Counting objects: 9, done.
 remote: Compressing objects: 100% (4/4), done.
 remote: Total 9 (delta 3), reused 8 (delta 2)
 Unpacking objects: 100% (9/9), done.
-From https://github.com/anushkrish/cocktail-recipes
+From https://github.com/gforsyth/cocktail-recipes
    a0c2052..22947b0  master     -> origin/master
 ```
 and merge them into his local repository
