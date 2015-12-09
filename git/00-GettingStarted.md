@@ -91,7 +91,7 @@ the status again:
 # Initial commit
 #
 # Changes to be committed:
-#   (use "git rm --cached <file>..." to unstage)
+#   (use "git checkout -- <file>..." to unstage)
 #
 #   new file:   HelloWorld.py
 #
@@ -103,7 +103,7 @@ to the files that are ready to be committed are stored. All files in the staging
 area are listed under "Changes to be committed:". We can see that 
 `HelloWorld.py` has been added to this list. Suppose we decided that we 
 actually do not want to commit this file, Git also tells us how to remove it
-from the staging area: `(use "git rm --cached <file>..." to unstage)`. But we 
+from the staging area: `(use "git checkout -- <file>..." to unstage)`. But we 
 don't want to do that right now.
 
 We want to save a snapshot of the repository as it is right now, we means we 
@@ -285,12 +285,11 @@ Github. A repository can have multiple remotes if required (just specify a
 different name and URL).
 
 `git push` is used to push all changes from the local repository to the remote 
-repository. For the time being, we shall ignore the `-u` flag and run the 
-following commands to upload the repository to Github:
+repository. 
 
 ```shell
 > git remote add origin https://github.com/anushkrish/alien_invasion.git
-> git push origin master
+> git push -u origin master
 Username for 'https://github.com': anushkrish
 Password for 'https://anushkrish@github.com':
 To https://github.com/anushkrish/alien_invasion.git
@@ -350,11 +349,8 @@ track differences between a local branch and its remote. A local branch can be
 made to track a remote branch using the following command:
 
 ```shell
-> git branch --set-upstream master origin/master
+> git branch -u origin/master master
 ```
-
-The above command works with Git version 1.7. From version 1.8 onwards, use 
-`git branch -u origin/master master`.
 
 Earlier, we came across the command `git push -u origin master` in the 
 instructions to push an existing repository to Github. The `-u` flag in that 
